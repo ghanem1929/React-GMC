@@ -1,0 +1,284 @@
+.AppContainer{
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 100vh;
+  background-color: #daf1f9;
+}
+
+.box {
+	position: fixed;
+	top: 0;
+	transform: rotate(80deg);
+	left: 0;
+}
+
+.wave {
+	position: fixed;
+	top: 0;
+	left: 0;
+  opacity: .4;
+  position: absolute;
+  top: 3%;
+  left: 10%;
+  background: #0af;
+  width: 1500px;
+  height: 1300px;
+  margin-left: -150px;
+  margin-top: -250px;
+  transform-origin: 50% 48%;
+  border-radius: 43%;
+  animation: drift 7000ms infinite linear;
+}
+
+.wave.-three {
+  animation: drift 7500ms infinite linear;
+	position: fixed;
+	background-color: #77daff;
+}
+
+.wave.-two {
+  animation: drift 3000ms infinite linear;
+  opacity: .1;
+  background: black;
+	position: fixed;
+}
+
+.box:after {
+  content: '';
+  display: block;
+  left: 0;
+  top: 0;
+  width: 100%;
+  height: 100%;
+  z-index: 11;
+  transform: translate3d(0, 0, 0);
+}
+
+@keyframes drift {
+  from { transform: rotate(0deg); }
+  from { transform: rotate(360deg); }
+}
+
+/*LOADING SPACE*/
+
+.contain {
+	animation-delay: 4s;
+	z-index: 1000;
+	position: fixed;
+	top: 0;
+	left: 0;
+	bottom: 0;
+	right: 0;/* 
+  display: -webkit-box;
+  display: -ms-flexbox; */
+  display: flex;/* 
+  -ms-flex-flow: row nowrap; */
+  flex-flow: row nowrap;/* 
+  -webkit-box-pack: center; */
+  -ms-flex-pack: center;
+  justify-content: center;/* 
+  -webkit-box-align: center;
+  -ms-flex-align: center; */
+  align-items: center;
+
+  background: #25a7d7;
+  background: -webkit-linear-gradient(#25a7d7, #2962FF);
+  background: linear-gradient(#25a7d7, #25a7d7);
+}
+
+.icon {
+  width: 100px;
+  height: 100px;
+  margin: 0 5px;
+}
+
+/*Animation*/
+.icon:nth-child(2) img {-webkit-animation-delay: 0.2s;animation-delay: 0.2s}
+.icon:nth-child(3) img {-webkit-animation-delay: 0.3s;animation-delay: 0.3s}
+.icon:nth-child(4) img {-webkit-animation-delay: 0.4s;animation-delay: 0.4s}
+
+.icon img {/* 
+  -webkit-animation: anim 2s ease infinite; */
+  animation: anim 2s ease infinite;/* 
+  -webkit-transform: scale(0,0) rotateZ(180deg); */
+  transform: scale(0,0) rotateZ(180deg);
+}
+
+@-webkit-keyframes anim{
+  0% {/* 
+    -webkit-transform: scale(0,0) rotateZ(-90deg); */
+    transform: scale(0,0) rotateZ(-90deg);opacity:0
+  }
+  30% {/* 
+    -webkit-transform: scale(1,1) rotateZ(0deg); */
+    transform: scale(1,1) rotateZ(0deg);opacity:1
+  }
+  50% {/* 
+    -webkit-transform: scale(1,1) rotateZ(0deg); */
+    transform: scale(1,1) rotateZ(0deg);opacity:1
+  }
+  80% {/* 
+    -webkit-transform: scale(0,0) rotateZ(90deg); */
+    transform: scale(0,0) rotateZ(90deg);opacity:0
+  }
+}
+
+@keyframes anim{
+  0% {/* 
+    -webkit-transform: scale(0,0) rotateZ(-90deg); */
+    transform: scale(0,0) rotateZ(-90deg);opacity:0
+  }
+  30% {
+    /* -webkit-transform: scale(1,1) rotateZ(0deg); */transform: scale(1,1) rotateZ(0deg);opacity:1
+  }
+  50% {
+    /* -webkit-transform: scale(1,1) rotateZ(0deg); */
+    transform: scale(1,1) rotateZ(0deg);opacity:1
+  }
+  80% {/* 
+    -webkit-transform: scale(0,0) rotateZ(90deg); */
+    transform: scale(0,0) rotateZ(90deg);opacity:0
+  }
+}
+
+.App{
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.leftCard{
+  display: flex;
+  justify-content: flex-start;
+  align-items: flex-start;
+  position: relative;
+  margin: 10px;
+  width: 25vw;
+  height: 80vh;
+  /* background-color: #242F9B; */
+  padding: 30px;
+  border-radius: 30px;
+}
+
+.closeIcon{
+  position: absolute;
+  top: 0;
+  right: 0;
+  margin: 17px;
+  cursor: pointer;
+}
+
+.cardTitle{
+  font-size: 26px;
+  padding: 20px 0px;
+}
+.label{
+  font-size: 16px
+
+}
+
+.inputs{
+  border-top-width: 0;
+  border-left-width: 0;
+  border-right-width: 0;
+  border-bottom-width: 1px;
+  border-color: #DBDFFD;
+  
+}
+.intrrest{
+  /* display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  align-items: center; */
+  position: relative;
+  padding: 10px 0;
+}
+.collapseBtn{
+  background-color: white;
+  border: none;
+  position: absolute;
+  top: 0;
+  right: 0;
+  color: #6c6e7b;
+  
+}
+
+.list{
+  list-style: none;
+
+}
+li{
+  display: block;
+  border-radius: 5px;
+  padding: 2px 5px;
+  color: #6c6e7b;
+}
+li:hover{
+  display: block;
+  width: 100px;
+  background-color: #242F9B;
+  color: white;
+  cursor: pointer;
+
+}
+.sendContainer{
+  position: absolute;
+  bottom: 0;
+  right: 0;
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+}
+
+.sendContainer h3{
+  font-size: 18px;
+  color: #242F9B;
+}
+.sendContainer .next{
+  font-size: 18px;
+  color: white;
+}
+
+.msgBtn{
+  margin: 30px;
+  cursor: pointer;
+  color: white;
+  background-color: #242F9B;
+  border-radius: 50%;
+  padding: 12px;
+}
+
+.rightCard{
+  
+  display: flex;
+  justify-content: flex-start;
+  align-items: flex-start;
+  position: relative;
+  margin: 10px;
+  width: 25vw;
+  height: 80vh;
+  padding: 30px;
+  border-radius: 30px;
+  background-color: #4b59cf;
+}
+.rightCard .closeIcon{
+  position: absolute;
+  top: 0;
+  right: 0;
+  margin: 17px;
+  color: white;
+}
+
+.title{
+  color: white;
+  padding: 30px;
+  font-size: 65px;
+  border-bottom: 1px white solid;
+}
+
+.subtitle{
+  color: white;
+  font-size: 30px;
+}
+
